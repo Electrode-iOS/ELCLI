@@ -7,12 +7,56 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA8CD57B1B7A9EBA00DA8BF7 /* THGFoundation_osx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA8CD5501B7A9C3F00DA8BF7 /* THGFoundation_osx.framework */; };
+		CA8CD5881B7BBF8100DA8BF7 /* CommitCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8CD5871B7BBF8100DA8BF7 /* CommitCommand.swift */; };
+		CA8CD58A1B7D1A2A00DA8BF7 /* VersionCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA977321B66AD330068AB25 /* VersionCommand.swift */; };
+		CA8CD58C1B7D1C1D00DA8BF7 /* Output.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA8CD58B1B7D1C1D00DA8BF7 /* Output.swift */; };
+		CA8CD58D1B7D3CF900DA8BF7 /* HelpCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA977301B66AD2A0068AB25 /* HelpCommand.swift */; };
+		CA8CD59B1B7D449A00DA8BF7 /* XCTestCase+Exceptions.m in Sources */ = {isa = PBXBuildFile; fileRef = CA8CD59A1B7D449A00DA8BF7 /* XCTestCase+Exceptions.m */; };
 		CAA977151B66A10F0068AB25 /* THGCLI.h in Headers */ = {isa = PBXBuildFile; fileRef = CAA977141B66A10F0068AB25 /* THGCLI.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CAA9771B1B66A10F0068AB25 /* THGCLI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CAA9770F1B66A10F0068AB25 /* THGCLI.framework */; };
 		CAA977221B66A10F0068AB25 /* THGCLITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA977211B66A10F0068AB25 /* THGCLITests.swift */; };
+		CAA9772C1B66A2B30068AB25 /* CLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9772B1B66A2B30068AB25 /* CLI.swift */; };
+		CAA9772E1B66A60D0068AB25 /* Command.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA9772D1B66A60D0068AB25 /* Command.swift */; };
+		CAA977381B66CD900068AB25 /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA977371B66CD900068AB25 /* Options.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CA8CD54B1B7A9C3F00DA8BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CACF2A0A1A9614D20084EFAE;
+			remoteInfo = THGFoundation;
+		};
+		CA8CD54D1B7A9C3F00DA8BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CACF2A151A9614D20084EFAE;
+			remoteInfo = THGFoundationTests;
+		};
+		CA8CD54F1B7A9C3F00DA8BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA24104D1AF965B700AA4410;
+			remoteInfo = THGFoundation_osx;
+		};
+		CA8CD5771B7A9E8000DA8BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = CA8CD5631B7A9DCB00DA8BF7;
+			remoteInfo = THGFoundation_osxTests;
+		};
+		CA8CD57C1B7A9ECC00DA8BF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = CA8CD5591B7A9DCA00DA8BF7;
+			remoteInfo = THGFoundation_osx;
+		};
 		CAA9771C1B66A10F0068AB25 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CAA977061B66A10F0068AB25 /* Project object */;
@@ -23,12 +67,23 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = THGFoundation.xcodeproj; path = ../Excalibur/THGFoundation.xcodeproj; sourceTree = "<group>"; };
+		CA8CD5871B7BBF8100DA8BF7 /* CommitCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommitCommand.swift; sourceTree = "<group>"; };
+		CA8CD58B1B7D1C1D00DA8BF7 /* Output.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Output.swift; sourceTree = "<group>"; };
+		CA8CD5981B7D449A00DA8BF7 /* THGCLITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "THGCLITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA8CD5991B7D449A00DA8BF7 /* XCTestCase+Exceptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "XCTestCase+Exceptions.h"; path = "../../Excalibur/THGFoundation/TestExtensions/XCTestCase+Exceptions.h"; sourceTree = "<group>"; };
+		CA8CD59A1B7D449A00DA8BF7 /* XCTestCase+Exceptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "XCTestCase+Exceptions.m"; path = "../../Excalibur/THGFoundation/TestExtensions/XCTestCase+Exceptions.m"; sourceTree = "<group>"; };
 		CAA9770F1B66A10F0068AB25 /* THGCLI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = THGCLI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA977131B66A10F0068AB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA977141B66A10F0068AB25 /* THGCLI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = THGCLI.h; sourceTree = "<group>"; };
 		CAA9771A1B66A10F0068AB25 /* THGCLITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = THGCLITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CAA977201B66A10F0068AB25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CAA977211B66A10F0068AB25 /* THGCLITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = THGCLITests.swift; sourceTree = "<group>"; };
+		CAA9772B1B66A2B30068AB25 /* CLI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CLI.swift; sourceTree = "<group>"; };
+		CAA9772D1B66A60D0068AB25 /* Command.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Command.swift; sourceTree = "<group>"; };
+		CAA977301B66AD2A0068AB25 /* HelpCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpCommand.swift; sourceTree = "<group>"; };
+		CAA977321B66AD330068AB25 /* VersionCommand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VersionCommand.swift; sourceTree = "<group>"; };
+		CAA977371B66CD900068AB25 /* Options.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Options.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8CD57B1B7A9EBA00DA8BF7 /* THGFoundation_osx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,9 +106,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA8CD52D1B7A98C200DA8BF7 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		CA8CD5461B7A9C3F00DA8BF7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA8CD54C1B7A9C3F00DA8BF7 /* THGFoundation.framework */,
+				CA8CD54E1B7A9C3F00DA8BF7 /* THGFoundationTests.xctest */,
+				CA8CD5501B7A9C3F00DA8BF7 /* THGFoundation_osx.framework */,
+				CA8CD5781B7A9E8000DA8BF7 /* THGFoundation_osxTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA8CD5861B7BBF6900DA8BF7 /* TestCommands */ = {
+			isa = PBXGroup;
+			children = (
+				CA8CD5871B7BBF8100DA8BF7 /* CommitCommand.swift */,
+			);
+			name = TestCommands;
+			sourceTree = "<group>";
+		};
 		CAA977051B66A10F0068AB25 = {
 			isa = PBXGroup;
 			children = (
+				CA8CD52D1B7A98C200DA8BF7 /* Modules */,
 				CAA977111B66A10F0068AB25 /* THGCLI */,
 				CAA9771E1B66A10F0068AB25 /* THGCLITests */,
 				CAA977101B66A10F0068AB25 /* Products */,
@@ -72,6 +156,11 @@
 			isa = PBXGroup;
 			children = (
 				CAA977141B66A10F0068AB25 /* THGCLI.h */,
+				CAA9772B1B66A2B30068AB25 /* CLI.swift */,
+				CA8CD58B1B7D1C1D00DA8BF7 /* Output.swift */,
+				CAA9772D1B66A60D0068AB25 /* Command.swift */,
+				CAA977371B66CD900068AB25 /* Options.swift */,
+				CAA9772F1B66AD210068AB25 /* Commands */,
 				CAA977121B66A10F0068AB25 /* Supporting Files */,
 			);
 			path = THGCLI;
@@ -89,7 +178,11 @@
 			isa = PBXGroup;
 			children = (
 				CAA977211B66A10F0068AB25 /* THGCLITests.swift */,
+				CA8CD5991B7D449A00DA8BF7 /* XCTestCase+Exceptions.h */,
+				CA8CD59A1B7D449A00DA8BF7 /* XCTestCase+Exceptions.m */,
+				CA8CD5861B7BBF6900DA8BF7 /* TestCommands */,
 				CAA9771F1B66A10F0068AB25 /* Supporting Files */,
+				CA8CD5981B7D449A00DA8BF7 /* THGCLITests-Bridging-Header.h */,
 			);
 			path = THGCLITests;
 			sourceTree = "<group>";
@@ -100,6 +193,15 @@
 				CAA977201B66A10F0068AB25 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CAA9772F1B66AD210068AB25 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				CAA977301B66AD2A0068AB25 /* HelpCommand.swift */,
+				CAA977321B66AD330068AB25 /* VersionCommand.swift */,
+			);
+			path = Commands;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -128,6 +230,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				CA8CD57D1B7A9ECC00DA8BF7 /* PBXTargetDependency */,
 			);
 			name = THGCLI;
 			productName = THGCLI;
@@ -158,7 +261,9 @@
 		CAA977061B66A10F0068AB25 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = TheHolyGrail;
 				TargetAttributes = {
 					CAA9770E1B66A10F0068AB25 = {
@@ -179,6 +284,12 @@
 			mainGroup = CAA977051B66A10F0068AB25;
 			productRefGroup = CAA977101B66A10F0068AB25 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CA8CD5461B7A9C3F00DA8BF7 /* Products */;
+					ProjectRef = CA8CD5451B7A9C3F00DA8BF7 /* THGFoundation.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				CAA9770E1B66A10F0068AB25 /* THGCLI */,
@@ -186,6 +297,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		CA8CD54C1B7A9C3F00DA8BF7 /* THGFoundation.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = THGFoundation.framework;
+			remoteRef = CA8CD54B1B7A9C3F00DA8BF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA8CD54E1B7A9C3F00DA8BF7 /* THGFoundationTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = THGFoundationTests.xctest;
+			remoteRef = CA8CD54D1B7A9C3F00DA8BF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA8CD5501B7A9C3F00DA8BF7 /* THGFoundation_osx.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = THGFoundation_osx.framework;
+			remoteRef = CA8CD54F1B7A9C3F00DA8BF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		CA8CD5781B7A9E8000DA8BF7 /* THGFoundation_osxTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = THGFoundation_osxTests.xctest;
+			remoteRef = CA8CD5771B7A9E8000DA8BF7 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		CAA9770D1B66A10F0068AB25 /* Resources */ = {
@@ -209,6 +351,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8CD58D1B7D3CF900DA8BF7 /* HelpCommand.swift in Sources */,
+				CA8CD58C1B7D1C1D00DA8BF7 /* Output.swift in Sources */,
+				CA8CD58A1B7D1A2A00DA8BF7 /* VersionCommand.swift in Sources */,
+				CAA9772C1B66A2B30068AB25 /* CLI.swift in Sources */,
+				CAA977381B66CD900068AB25 /* Options.swift in Sources */,
+				CAA9772E1B66A60D0068AB25 /* Command.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA8CD5881B7BBF8100DA8BF7 /* CommitCommand.swift in Sources */,
+				CA8CD59B1B7D449A00DA8BF7 /* XCTestCase+Exceptions.m in Sources */,
 				CAA977221B66A10F0068AB25 /* THGCLITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,6 +373,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CA8CD57D1B7A9ECC00DA8BF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = THGFoundation_osx;
+			targetProxy = CA8CD57C1B7A9ECC00DA8BF7 /* PBXContainerItemProxy */;
+		};
 		CAA9771D1B66A10F0068AB25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CAA9770E1B66A10F0068AB25 /* THGCLI */;
@@ -252,6 +407,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -318,6 +474,7 @@
 		CAA977261B66A10F0068AB25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -327,14 +484,17 @@
 				INFOPLIST_FILE = THGCLI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CAA977271B66A10F0068AB25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -344,6 +504,7 @@
 				INFOPLIST_FILE = THGCLI/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -352,6 +513,7 @@
 		CAA977291B66A10F0068AB25 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -363,13 +525,18 @@
 				);
 				INFOPLIST_FILE = THGCLITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "-DDEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "THGCLITests/THGCLITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CAA9772A1B66A10F0068AB25 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
@@ -377,7 +544,10 @@
 				);
 				INFOPLIST_FILE = THGCLITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = "io.theholygrail.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "THGCLITests/THGCLITests-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -400,6 +570,7 @@
 				CAA977271B66A10F0068AB25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CAA977281B66A10F0068AB25 /* Build configuration list for PBXNativeTarget "THGCLITests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +579,7 @@
 				CAA9772A1B66A10F0068AB25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
