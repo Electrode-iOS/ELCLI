@@ -128,7 +128,7 @@ public class CLI {
                         if arg.hasPrefix(optionFlag + "=") {
                             // is this a "--flag=value" type argument?
                             // if so, break it into its parts.
-                            let parts = split(arg.characters, maxSplit: 1, allowEmptySlices: false, isSeparator: { return $0 == "=" })
+                            let parts = arg.characters.split(1, allowEmptySlices: false, isSeparator: { return $0 == "=" })
                             if parts.count == 2 {
                                 optionFlag = String(parts[0])
                                 value = String(parts[1])
