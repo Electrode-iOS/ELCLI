@@ -7,7 +7,11 @@
 //
 
 import Foundation
+
+#if NOFRAMEWORKS
+#else
 import THGFoundation
+#endif
 
 public protocol Command: AnyObject {
     // descriptive properties
