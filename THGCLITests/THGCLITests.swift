@@ -28,7 +28,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["commit", "-a", "-m", "a commit message"]
+        cli.allArgumentsToExecutable = ["commit", "-a", "-m", "a commit message"]
         
         // run it and see what happens
         let result: CLIResult = cli.run()!
@@ -48,7 +48,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["commit", "--all", "--message=a commit message"]
+        cli.allArgumentsToExecutable = ["commit", "--all", "--message=a commit message"]
         
         // run it and see what happens
         let result: CLIResult = cli.run()!
@@ -68,7 +68,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["commit", "-a", "--", "-m", "a commit message"]
+        cli.allArgumentsToExecutable = ["commit", "-a", "--", "-m", "a commit message"]
         
         // run it and see what happens
         let result: CLIResult = cli.run()!
@@ -89,7 +89,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["--version"]
+        cli.allArgumentsToExecutable = ["--version"]
         
         // run it and see what happens
         cli.run()
@@ -100,7 +100,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["horse", "--shit"]
+        cli.allArgumentsToExecutable = ["horse", "--shit"]
         
         // run it and see what happens
         XCTAssertThrowsSpecific({ cli.run() }, THGExceptionFailure, "Failed.")
@@ -111,7 +111,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["commit", "--shit"]
+        cli.allArgumentsToExecutable = ["commit", "--shit"]
         
         // run it and see what happens
         XCTAssertThrowsSpecific({ cli.run() }, THGExceptionFailure, "Failed.")
@@ -122,7 +122,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["commit", "-a", "-m", "a commit message", "firstFlaglessParam", "secondFlaglessParam", "thirdFlaglessParam"]
+        cli.allArgumentsToExecutable = ["commit", "-a", "-m", "a commit message", "firstFlaglessParam", "secondFlaglessParam", "thirdFlaglessParam"]
         
         // run it and see what happens
         let result: CLIResult = cli.run()!
@@ -147,7 +147,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["--help"]
+        cli.allArgumentsToExecutable = ["--help"]
         
         cli.run()
     }
@@ -157,7 +157,7 @@ class THGCLITests: XCTestCase {
         
         cli.addCommands([CommitCommand()])
         
-        cli.passedCommandLine = ["commit", "--help"]
+        cli.allArgumentsToExecutable = ["commit", "--help"]
         
         XCTAssertThrowsSpecific({ cli.run() }, THGExceptionFailure, "Failed.")
     }

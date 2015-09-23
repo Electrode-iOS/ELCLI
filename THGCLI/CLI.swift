@@ -21,8 +21,9 @@ public class CLI {
         appName = name
         appVersion = version
         appDescription = version
-        passedCommandLine = NSProcessInfo.processInfo().arguments as [String]
-        
+        var commandLine = NSProcessInfo.processInfo().arguments
+        executableName = commandLine.removeFirst()
+        allArgumentsToExecutable = commandLine
         addCommands([VersionCommand(cli: self), HelpCommand(cli: self)])
     }
     
@@ -34,9 +35,9 @@ public class CLI {
     }
     
     public func run() -> CLIResult? {
-        if let passedCommandLine = passedCommandLine {
-            if let command = identifyCommand(passedCommandLine) {
-                processCommandLine(passedCommandLine, command: command)
+        if let allArgumentsToExecutable = allArgumentsToExecutable {
+            if let command = identifyCommand(allArgumentsToExecutable) {
+                processArguments(allArgumentsToExecutable, command: command)
                 return command.execute(nil)
             }
         }
@@ -47,8 +48,9 @@ public class CLI {
     public let appName: String
     public let appVersion: String
     public let appDescription: String
+    public let executableName: String
 
-    public var passedCommandLine: Array<String>? = nil
+    public var allArgumentsToExecutable: Array<String>? = nil
     
     public var commands: Array<Command> {
         get {
@@ -56,12 +58,12 @@ public class CLI {
         }
     }
     
-    private func identifyCommand(commandLine: Array<String>) -> Command? {
-        if (commandLine.count < 1) {
+    private func identifyCommand(arguments: Array<String>) -> Command? {
+        if (arguments.count < 1) {
             return nil
         }
         
-        let name = commandLine[0]
+        let name = arguments[0]
         let foundCommands = supportedCommands.filter { (command) -> Bool in
             return command.name == name
         }
@@ -81,7 +83,7 @@ public class CLI {
         return nil
     }
     
-    private func processCommandLine(arguments: Array<String>, command: Command) {
+    private func processArguments(arguments: Array<String>, command: Command) {
         var skipNext = false
         
         for index in 1..<arguments.count {
