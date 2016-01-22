@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:THGCLI.xcodeproj">
+      location = "self:ELCLI.xcodeproj">
    </FileRef>
 </Workspace>

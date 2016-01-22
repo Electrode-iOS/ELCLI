@@ -1,16 +1,16 @@
 //
 //  Output.swift
-//  THGCLI
+//  ELCLI
 //
 //  Created by Brandon Sneed on 8/13/15.
-//  Copyright © 2015 TheHolyGrail. All rights reserved.
+//  Copyright © 2015 WalmartLabs. All rights reserved.
 //
 
 import Foundation
 
 #if NOFRAMEWORKS
 #else
-import THGFoundation
+import ELFoundation
 #endif
 
 public enum Output {

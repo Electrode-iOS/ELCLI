@@ -1,17 +1,17 @@
 //
-//  THGCLITests.swift
-//  THGCLITests
+//  ELCLITests.swift
+//  ELCLITests
 //
 //  Created by Brandon Sneed on 7/27/15.
-//  Copyright (c) 2015 TheHolyGrail. All rights reserved.
+//  Copyright (c) 2015 WalmartLabs. All rights reserved.
 //
 
 import Cocoa
 import XCTest
-import THGCLI
-import THGFoundation
+import ELCLI
+import ELFoundation
 
-class THGCLITests: XCTestCase {
+class ELCLITests: XCTestCase {
     
     override func setUp() {
         super.setUp()

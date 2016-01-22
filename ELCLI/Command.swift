@@ -1,16 +1,16 @@
 //
 //  Command.swift
-//  THGCLI
+//  ELCLI
 //
 //  Created by Brandon Sneed on 7/27/15.
-//  Copyright (c) 2015 TheHolyGrail. All rights reserved.
+//  Copyright (c) 2015 WalmartLabs. All rights reserved.
 //
 
 import Foundation
 
 #if NOFRAMEWORKS
 #else
-import THGFoundation
+import ELFoundation
 #endif
 
 public protocol Command: AnyObject {
@@ -27,7 +27,7 @@ public protocol Command: AnyObject {
     func execute(otherParams: Array<String>?) -> CLIResult
 }
 
-private var optionArrayKey: NSString = "THGCLIOptionsKey"
+private var optionArrayKey: NSString = "ELCLIOptionsKey"
 
 public extension Command {
     public var options: Array<Option> {

@@ -1,13 +1,13 @@
 //
 //  CommitCommand.swift
-//  THGCLI
+//  ELCLI
 //
 //  Created by Brandon Sneed on 8/12/15.
-//  Copyright © 2015 TheHolyGrail. All rights reserved.
+//  Copyright © 2015 WalmartLabs. All rights reserved.
 //
 
 import Foundation
-import THGCLI
+import ELCLI
 
 public class CommitCommand: NSObject, Command {
     // Internal properties
