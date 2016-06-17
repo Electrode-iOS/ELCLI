@@ -22,10 +22,10 @@ public class HelpCommand: Command {
         // do nothing
     }
     
-    public func execute(otherParams: Array<String>?) -> CLIResult {
+    public func execute(otherParams: Array<String>?) -> Int {
         write(.Stdout, "usage: ")
         write(.Stdout, "\(NSProcessInfo.processInfo().processName) ")
-        writeln(.Stdout, "\(cli.appName) <command> [<args>]\n")
+        writeln(.Stdout, "<command> [<args>]\n")
 
         writeln(.Stdout, "The most commonly used \(cli.appName) commands are:")
         
@@ -36,12 +36,11 @@ public class HelpCommand: Command {
         
         writeln(.Stdout, "")
         
-        return CLIResult()
+        return 0
     }
     
     init(cli: CLI) {
         self.cli = cli
-        
     }
     
 }

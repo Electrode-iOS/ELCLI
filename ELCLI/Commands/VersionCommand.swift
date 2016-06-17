@@ -22,10 +22,10 @@ public class VersionCommand: Command {
         // do nothing
     }
     
-    public func execute(otherParams: Array<String>?) -> CLIResult {
-        writeln(.Stderr, "\(cli.appName) version \(cli.appVersion)")
+    public func execute(otherParams: Array<String>?) -> Int {
+        writeln(.Stdout, "\(cli.appName) version \(cli.appVersion), \(cli.appDescription)")
         
-        return CLIResult()
+        return 0
     }
     
     init(cli: CLI) {

@@ -24,7 +24,7 @@ public protocol Command: AnyObject {
     var quiet: Bool { get set }
     
     func configureOptions()
-    func execute(otherParams: Array<String>?) -> CLIResult
+    func execute(otherParams: Array<String>?) -> Int
 }
 
 private var optionArrayKey: NSString = "ELCLIOptionsKey"

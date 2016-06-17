@@ -20,7 +20,7 @@ public class CLI {
     public init(name: String, version: String, description: String) {
         appName = name
         appVersion = version
-        appDescription = version
+        appDescription = description
         var commandLine = NSProcessInfo.processInfo().arguments
         executableName = commandLine.removeFirst()
         allArgumentsToExecutable = commandLine
@@ -34,7 +34,7 @@ public class CLI {
         }
     }
     
-    public func run() -> CLIResult? {
+    public func run() -> Int {
         if let allArgumentsToExecutable = allArgumentsToExecutable {
             if let command = identifyCommand(allArgumentsToExecutable) {
                 processArguments(allArgumentsToExecutable, command: command)
@@ -42,7 +42,11 @@ public class CLI {
             }
         }
         
-        return nil
+        // if they got here, nothing caught so show the help.
+        
+        HelpCommand(cli: self).execute(nil)
+        
+        return 0
     }
     
     public let appName: String
@@ -176,12 +180,4 @@ public class CLI {
     }
     
     public var supportedCommands: Array<Command> = []
-}
-
-public struct CLIResult {
-    public var resultCode: Int? = 0
-    public var resultDescription: String?
-    public var executedCommand: Command?
-    
-    public init() {}
 }
