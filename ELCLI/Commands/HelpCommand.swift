@@ -12,7 +12,8 @@ public class HelpCommand: Command {
     private let cli: CLI
     
     public var name: String { return "--help" }
-    public var helpDescription: String { return "" }
+    public var shortHelpDescription: String { return "" }
+    public var longHelpDescription: String { return "" }
     public var failOnUnrecognizedOptions: Bool { return false }
     
     public var verbose: Bool = false

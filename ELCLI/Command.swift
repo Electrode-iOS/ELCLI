@@ -16,7 +16,8 @@ import ELFoundation
 public protocol Command: AnyObject {
     // descriptive properties
     var name: String { get }
-    var helpDescription: String { get }
+    var shortHelpDescription: String { get }
+    var longHelpDescription: String { get }
     var failOnUnrecognizedOptions: Bool { get }
     
     // global command properties
@@ -37,8 +38,6 @@ public extension Command {
                 let newArray = Array<Option>()
                 setAssociatedObject(self, value: newArray, associativeKey: &optionArrayKey, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
                 optionArray = newArray
-                
-                addGlobalCommandOptions()
             }
             return optionArray!
         }
@@ -81,6 +80,10 @@ public extension Command {
 
         // print global options here.
         
+        // print long help description here.
+        writeln(.Stdout, self.longHelpDescription)
+        writeln(.Stdout, "")
+
         // print command specific options here.
         
         var flags = options.filter { (option) -> Bool in
@@ -110,13 +113,13 @@ public extension Command {
         setAssociatedObject(self, value: optionArray, associativeKey: &optionArrayKey, policy: .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
     }
     
-    private func addGlobalCommandOptions() {
-        addOption(["--help"], usage: "") { (option, value) -> Void in
+    public func addGlobalCommandOptions() {
+        addOption(["--help"], usage: "show help for this command") { (option, value) -> Void in
             self.showHelp()
             exitSuccess()
         }
         
-        addOption(["-v", "--verbose"], usage: "") { (option, value) -> Void in
+        addOption(["-v", "--verbose"], usage: "be verbose") { (option, value) -> Void in
             self.verbose = true
         }
     }

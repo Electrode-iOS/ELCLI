@@ -30,6 +30,7 @@ public class CLI {
     public func addCommands(commands: Array<Command>) {
         commands.each {
             $0.configureOptions()
+            $0.addGlobalCommandOptions()
             self.supportedCommands.append($0)
         }
     }
@@ -108,6 +109,11 @@ public class CLI {
             
             // is it a flag, like '--flag 'or '--flag value'?
             if isFlag(arg) {
+                if arg == "--help" {
+                    command.showHelp()
+                    exit(0)
+                }
+                
                 let matchingOptions = options.filter { (option) -> Bool in
                     if let flags = option.flags {
                         for flagIndex in 0..<flags.count {

@@ -114,7 +114,7 @@ public func printCommand(command: Command) {
     var commandData = "   "
     
     commandData += command.name.padBack(14)
-    commandData += " " + command.helpDescription
+    commandData += " " + command.shortHelpDescription
     
     writeln(.Stdout, commandData)
 }
