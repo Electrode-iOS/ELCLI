@@ -34,12 +34,17 @@ public enum Output {
 
 public func write(destination: Output, _ data: String) {
     var str = data
+    var finalDestination = destination
     if destination == .Stderr {
         str = "error: " + data
+        if isInUnitTest() {
+            // if we're debugging unit tests, data won't show if it's spit otu to stderr.
+            finalDestination = .Stdout
+        }
     }
 
     if let outputData = str.dataUsingEncoding(NSUTF8StringEncoding) {
-        destination.fileHandle().writeData(outputData)
+        finalDestination.fileHandle().writeData(outputData)
     }
 }
 
